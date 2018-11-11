@@ -10,11 +10,8 @@ html {
 
 body {
     font-family: 'Special Elite', cursive;
-    color: #2c2d2c;
-    
+    color: #2c2d2c;    
 }
-
-
 
 
 .wrapper {
@@ -28,16 +25,25 @@ body {
     flex-direction: column;
     height: 85vh;
     align-content: space-between;
-    padding: 15% 5%;
+    padding: 18% 0 0 0;
+}
 
+@media (max-width: 480px) {
+    .flex-container {
+        text-align: center;
+    }
+    .social-links {
+        margin: auto;
+    }
 
 }
+
 
 .header {
     /* background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../assets/federica-galli-449563-unsplash.jpg); */
     background-image: url(../assets/federica-galli-449563-unsplash.jpg);
     background-size: cover;
-    height: 103vh;
+    height: 102vh;
     margin: 0;
 }
 
@@ -88,13 +94,57 @@ h3 {
     z-index: 1;
 }
 
+@media (max-width: 480px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+
+
+.typed::after {
+	content: '|';
+	display: inline;
+    animation: blink 0.7s infinite;
+    font-size: 3.5rem;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
 a {
     padding: 20px;
-    color: #3CB371;
+    color:#CD5C5C
+
 }
 
 span {
-    color: #3CB371;
+    color:#CD5C5C
+
 }
 .social-links {
     display: flex;
@@ -102,11 +152,9 @@ span {
     justify-content: around;
     padding: 0;
     list-style: none;
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     z-index: 3;
-
 }
-
 
 
 
